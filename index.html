@@ -113,7 +113,7 @@
 	
      var interval=setInterval(function(){
 	
-	 $.post('fetch.php?link=fetch_msg', function(data) {
+	 $.post('http://www.vinnettech.com/myapp/fetch.php?link=fetch_msg', function(data) {
 
  $('#loading').hide();
  $('#msg').show();
@@ -140,7 +140,7 @@ var msg=$('#message').val();
 if(msg!=='')
 {
 $('#sending').show();
-$.post('fetch.php?link=send_msg',{user:user,msg:msg},function(data) {
+$.post('http://www.vinnettech.com/myapp/fetch.php?link=send_msg',{user:user,msg:msg},function(data) {
 $('#sending').hide();
 });
 clearInput()
